@@ -25,6 +25,15 @@
  * üres tömbbel
  */
  const getMovies = async (url = '') => {
+     try {
+        const response = await fetch(url);
+        return await response.json();
+     }
+     catch(error){
+         console.error(error);
+         return [];
+     }
+     
     
 };
 
@@ -32,5 +41,5 @@
  * TODO: exportáld ki helyesen a getMovies függvényt!
  */
 export {
-    
+    getMovies
 }

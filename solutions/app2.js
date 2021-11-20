@@ -18,12 +18,13 @@
  * @returns {[{}, {}]} objektumok tömbjével tér vissza
  */
 const getUsers = async (url = '') => {
-    
+    const response = await fetch(url);
+    return await response.json();
 };
 
 /**
  * TODO: exportáld ki helyesen a getUsers függvényt!
  */
 export {
-    
+    getUsers
 }
